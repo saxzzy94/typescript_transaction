@@ -10,6 +10,9 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.send("welcome to transaction- API");
+});
 app.use("/users", registerUser);
 app.use("/users", loginUser);
 app.use("/transactions", transactionRoute);
