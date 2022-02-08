@@ -1,12 +1,14 @@
 {
   "name": "tmtc",
   "version": "1.0.0",
+  "engines": { "node": "12.16.3" },
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node dist/server.js",
     "dev": "nodemon dist/server.js",
-    "compile": "rimraf dist && tsc --watch",
+    "build": "rimraf dist && tsc",
+    "deploy": "git add . && git commit -m Heroku && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Osazee Agbonze",
