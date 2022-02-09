@@ -8,8 +8,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node dist/server.js",
-    "build": "rimraf dist && tsc",
-    "tsc": "tsc",
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "build": "tsc",
+    "postinstall": "npm run build",
     "deploy": "git add . && git commit -m Heroku && git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
